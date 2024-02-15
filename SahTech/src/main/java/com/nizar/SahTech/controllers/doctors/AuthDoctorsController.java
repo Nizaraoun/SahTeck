@@ -11,12 +11,9 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-
 import com.nizar.SahTech.dto.doctors.AuthDoctorsDTO;
-import com.nizar.SahTech.dto.users.AuthenticationDTO;
 import com.nizar.SahTech.dto.users.AuthenticationResponse;
 import com.nizar.SahTech.services.doctors.DoctorDetailsServiceImpl;
-import com.nizar.SahTech.services.users.jwt.UserDetailsServiceImpl;
 import com.nizar.SahTech.util.JwtUtil;
 
 import jakarta.servlet.http.HttpServletResponse;
