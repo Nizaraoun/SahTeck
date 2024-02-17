@@ -8,6 +8,11 @@ public class SignupDTO {
 
     private String email;
 
+    private String cin;
+
+    private String phone;
+
     private String password;
+
 
 }

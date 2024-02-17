@@ -30,5 +30,10 @@ public class userservice {
 
     return null;}
 
-}
+   public void getUsername(String email) {
 
+      userRepository.findById(1L).orElseThrow(()-> new RuntimeException("User not found"));
+
+
+}
+}

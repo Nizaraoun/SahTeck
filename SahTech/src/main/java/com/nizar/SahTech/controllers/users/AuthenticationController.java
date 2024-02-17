@@ -15,7 +15,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
@@ -26,6 +25,7 @@ public class AuthenticationController {
 
     @Autowired
     private JwtUtil jwtUtil;
+
 
     @Autowired
     private AuthenticationManager authenticationManager;
@@ -47,6 +47,9 @@ public class AuthenticationController {
         final UserDetails userDetails = userDetailsService.loadUserByUsername(authenticationDTO.getEmail());
 
         final String jwt = jwtUtil.generateToken(userDetails.getUsername());
+        
+        System.out.println("name: " + userDetails);
+        
 
         return new AuthenticationResponse(jwt);
 

@@ -1,4 +1,6 @@
 package com.nizar.SahTech.entities.User;
+import org.hibernate.mapping.Set;
+
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -15,6 +17,18 @@ public class User {
 
     private String email;
 
+    private String cin;
+
+    private String phone;
+
     private String password;
+
+    private boolean active;
+
+
+
+
+
+
 
 }

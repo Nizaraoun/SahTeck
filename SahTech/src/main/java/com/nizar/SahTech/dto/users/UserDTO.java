@@ -10,5 +10,12 @@ public class UserDTO {
 
     private String email;
 
+    private String cin;
+
+    private String phone;
+
+    private String password;
+
+    private boolean active;
 
 }
